@@ -29,17 +29,17 @@ DROP TABLE IF EXISTS song_album;
 
 CREATE TABLE "user" (
     id       INTEGER PRIMARY KEY NOT NULL,
-    name     CHAR(50) NOT NULL,
-    email    CHAR(50) NOT NULL,
+    name     CHAR(150) NOT NULL,
+    email    CHAR(150) NOT NULL,
     premium  BOOLEAN NOT NULL
 );
 
 
 CREATE TABLE "event" (
     id        SERIAL PRIMARY KEY NOT NULL,
-    name      CHAR(50) NOT NULL,
+    name      CHAR(150) NOT NULL,
     date      DATE NOT NULL,
-    location  CHAR(50) NOT NULL
+    location  CHAR(150) NOT NULL
 );
 
 
@@ -52,13 +52,13 @@ CREATE TABLE user_event (
 
 CREATE TABLE playlist_name (
     id            INTEGER PRIMARY KEY NOT NULL,
-    name          CHAR(50) NOT NULL
+    name          CHAR(150) NOT NULL
 );
 
 
 CREATE TABLE song (
     id       SERIAL PRIMARY KEY NOT NULL,
-    name     CHAR(50) NOT NULL,
+    name     CHAR(150) NOT NULL,
     date     DATE NOT NULL,
     duration FLOAT NOT NULL
 );
@@ -79,19 +79,19 @@ CREATE TABLE user_playlist (
 
 CREATE TABLE genre (
     id       INTEGER PRIMARY KEY NOT NULL,
-    name     CHAR(50) NOT NULL
+    name     CHAR(150) NOT NULL
 );
 
 CREATE TABLE artist (
     id           INTEGER PRIMARY KEY NOT NULL,
-    name         CHAR(50) NOT NULL,
-    description  CHAR(50) NOT NULL
+    name         CHAR(150) NOT NULL,
+    description  CHAR(150) NOT NULL
 );
 
 CREATE TABLE album (
     id       INTEGER PRIMARY KEY NOT NULL,
-    name     CHAR(50) NOT NULL,
-    description  CHAR(50) NOT NULL
+    name     CHAR(150) NOT NULL,
+    description  CHAR(150) NOT NULL
 );
 
 CREATE TABLE song_genre (
