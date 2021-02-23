@@ -28,10 +28,11 @@ DROP TABLE IF EXISTS song_album;
 
 
 CREATE TABLE "user" (
-    id       INTEGER PRIMARY KEY NOT NULL,
-    name     CHAR(150) NOT NULL,
-    email    CHAR(150) NOT NULL,
-    premium  BOOLEAN NOT NULL
+    id        INTEGER PRIMARY KEY NOT NULL,
+    name      CHAR(150) NOT NULL,
+    email     CHAR(150) NOT NULL,
+    premium   BOOLEAN NOT NULL,
+    password  CHAR(150) NOT NULL
 );
 
 
