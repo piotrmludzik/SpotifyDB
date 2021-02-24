@@ -1,10 +1,3 @@
-CREATE TRIGGER IU_password_check
-    BEFORE INSERT OR UPDATE
-    ON "user"
-    FOR EACH ROW
-    EXECUTE PROCEDURE password_checker();
-
-
 CREATE OR REPLACE FUNCTION password_checker()
     RETURNS TRIGGER
     AS
@@ -23,7 +16,6 @@ CREATE OR REPLACE FUNCTION generate_password()
     AS
     $$
     DECLARE
-
         generate_password VARCHAR;
     BEGIN
         FOR chr IN 1..8 LOOP
@@ -69,3 +61,9 @@ CREATE OR REPLACE FUNCTION get_random_char(is_letter boolean)
     END;
     $$ LANGUAGE PLPGSQL;
 
+
+CREATE TRIGGER IU_password_check
+    BEFORE INSERT OR UPDATE
+    ON "user"
+    FOR EACH ROW
+    EXECUTE PROCEDURE password_checker();
