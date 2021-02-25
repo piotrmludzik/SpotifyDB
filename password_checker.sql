@@ -1,3 +1,8 @@
+-- 1. Trigger, który w momencie gdy użytkownik zostawi pole hasło puste
+-- wygeneruje mu hasło o długości 8 znaków zawierające conajmniej jedną
+-- literę i conajmniej jedną cyfrę (to załatwia od razu fajną procedurkę)
+
+
 CREATE OR REPLACE FUNCTION password_checker()
     RETURNS TRIGGER
     AS
