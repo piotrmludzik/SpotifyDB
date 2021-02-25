@@ -17,4 +17,4 @@ CREATE OR REPLACE FUNCTION get_artist_songs(id_num int)
     END;
     $$;
 
-SELECT get_artist_songs(1000);
+SELECT * FROM get_artist_songs(1000);
