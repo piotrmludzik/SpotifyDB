@@ -1,0 +1,2 @@
+--
+-- 2. Widok ze wszystkimi informacjami o piosenkach danego artysty

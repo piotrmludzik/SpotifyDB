@@ -67,3 +67,9 @@ CREATE TRIGGER IU_password_check
     ON "user"
     FOR EACH ROW
     EXECUTE PROCEDURE password_checker();
+
+
+
+
+
+
